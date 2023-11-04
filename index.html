@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Location</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>		
+	$.getJSON("https://api.ipify.org?format=json", function(data) {	
+		$("#Ipadd").html("Your Current IP Address "+ data.ip);
+        $("#Ipaddress").html("  IP Address "+ data.ip);
+        
+	})
+	</script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <div id="container">
+    <div id="main-page">
+        <div id="main-page-left">
+            <h1>Post Office Application</h1>
+            <p>This Application Allows you to extract information about <br>the nearest Post Offices, based on your location.</p>
+            <div class="postman">
+                <img src="./image1.png" alt="postman">
+            </div>
+            
+        </div>
+
+        <div id="main-page-right">
+            <h1 id="Ipadd"></h1>
+            <button id="loc-btn" type="submit">Get Started</button>
+        </div>
+    </div>
+
+    <div class="info-page">
+        <p id="Ipaddress"></p>
+        <div class="top-bar">
+           
+
+        </div>
+        <div class="maps">
+            <h1>Your Current Location</h1>
+            
+        </div>
+
+        <div class="more-info">
+            <h1>More Information About You</h1>
+            
+        </div>
+        <div class="Officebox">
+            <h1>Post Offices Near You</h1>
+            <div class="Post-office">
+                <button id="getInfoBtn">Get Post Office Info</button>
+                <input type="text" id="searchBox" placeholder="Search by name or branch office">
+            </div>
+            <div id="postOffices">
+
+
+            </div>
+          </div>
+    </div>
+
+
+
+   </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
