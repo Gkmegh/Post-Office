@@ -98,11 +98,8 @@ body {
 
 
 .top-bar{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
     margin-bottom: 3rem;
-    
+    padding-left: 2rem;
 }
 
 #Ipaddress{
@@ -117,9 +114,11 @@ body {
 }
 
 
-.cityname{
+.city-info{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+   column-gap: 10rem;
+    /* flex-direction: column; */
     color: rgba(184, 188, 204, 0.50);
     font-family: Montserrat;
     font-size: 34px;
@@ -135,6 +134,8 @@ body {
 
 .lat-log{
     display: flex;
+    flex-wrap: wrap;
+    column-gap: 5rem;
     color: rgba(184, 188, 204, 0.50);
     font-family: Montserrat;
     font-size: 34px;
@@ -144,7 +145,10 @@ body {
     margin-top: 20px;
     
 }
-
+.city-detail{
+    display: flex;
+    flex-direction: wrap;
+}
 
 .maps{
     display: flex;
@@ -157,7 +161,7 @@ body {
 .mapsloc{
     display: flex;
     justify-content: center;
-    align-items: center;
+   
     width: 86.875rem; 
     height: 42.3125rem;
 
@@ -187,7 +191,7 @@ line-height: normal;
 
 #postOffices{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     flex-wrap: wrap;
     padding-top: 1rem;
@@ -198,14 +202,15 @@ line-height: normal;
 
 
 .postcard{
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     padding-left: 1rem;
-    width: 42.3995rem;
+    width: 40rem;
     height: 24.9375rem;
     flex-shrink: 0;
     border-radius: 0.625rem;
     background: #575A85;
+    margin-bottom: 2rem;
 }
 
 .postcard>p{
@@ -218,6 +223,7 @@ line-height: normal;
 }
 
 .Post-office>input{
+    padding-left: 1rem;
     color: #B8BCCC;
     font-family: Montserrat;
     font-size: 2rem;
