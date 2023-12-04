@@ -4,14 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Location</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script>		
-	$.getJSON("https://api.ipify.org?format=json", function(data) {	
-		$("#Ipadd").html("Your Current IP Address "+ data.ip);
-        $("#Ipaddress").html("  IP Address "+ data.ip);
-        
-	})
-	</script>
+  
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -33,7 +26,6 @@
     </div>
 
     <div class="info-page">
-        <p id="Ipaddress"></p>
         <div class="top-bar">
            
 
@@ -50,7 +42,6 @@
         <div class="Officebox">
             <h1>Post Offices Near You</h1>
             <div class="Post-office">
-                <button id="getInfoBtn">Get Post Office Info</button>
                 <input type="text" id="searchBox" placeholder="Search by name or branch office">
             </div>
             <div id="postOffices">
